@@ -8,9 +8,9 @@ int main(void)
 	int i;
 
 	i = 0;
-	i = ft_write(1, "caio", 30);
+	i = ft_write(1, "caio", 4);
 	printf("\n%d\n", i);
-	i = write(1, "caio", 30);
+	i = write(1, "caio", 4);
 	printf("\n%d\n", i);
 	return (0);
 }
