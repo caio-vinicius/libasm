@@ -8,7 +8,7 @@ ft_strcpy_next:
 	cmp [rsi+rcx], byte 0
 	jz ft_strcpy_null
 	mov rdi, rsi
-	add rcx, 1
+	inc rcx
 	jmp ft_strcpy_next
 
 ft_strcpy_null:

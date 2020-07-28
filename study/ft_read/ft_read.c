@@ -17,9 +17,10 @@ int	main(void)
 	fd = open("teste.txt", O_RDONLY);
 	i = read(fd, buf, 2);
 	printf("%s | %d\n", buf, i);
-
-	buf = malloc((2 + 1) * sizeof(char));
+	close(fd);
 	fd = open("teste.txt", O_RDONLY);
 	i = ft_read(fd, buf, 2);
 	printf("%s | %d\n", buf, i);
+	close(fd);
+	free(buf);
 }

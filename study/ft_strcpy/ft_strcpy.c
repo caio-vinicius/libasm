@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 extern char	*ft_strcpy(char *dest, const char *src);
 
@@ -24,6 +25,7 @@ int main(void)
 
 	dest = malloc(2 * sizeof(char));
 
-	printf("C: %s\n", ft_strcpy2(dest, "Teste"));
-	printf("ASM: %s\n", ft_strcpy(dest, "Teste"));
+	printf("ASM: %s\n", ft_strcpy(dest, "Caiow"));
+	printf("C: %s\n", ft_strcpy2(dest, "Waioc"));
+	printf("C: %s\n", strcpy(dest, "Zaioc"));
 }

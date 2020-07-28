@@ -7,7 +7,7 @@ ft_strlen:
 ft_strlen_next:
 	cmp [rdi+rcx], byte 0
 	jz ft_strlen_null
-	add rcx, 1
+	inc rcx
 	jmp ft_strlen_next
 
 ft_strlen_null:
