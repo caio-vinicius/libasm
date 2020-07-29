@@ -6,7 +6,7 @@
 #    By: caio <csouza-f@student.42sp.org.br>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/07/28 11:39:04 by caio              #+#    #+#              #
-#    Updated: 2020/07/28 11:51:59 by caio             ###   ########.fr        #
+#    Updated: 2020/07/29 14:28:53 by caio             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -27,7 +27,7 @@ build/%.o: %.asm
 	nasm -f elf64 $< -o $@
 
 test: $(NAME)
-	gcc -no-pie main.c $< 
+	gcc -no-pie main.c $< -I includes/ 
 
 clean:
 	rm -rf $(OBJS)
@@ -35,6 +35,6 @@ clean:
 fclean: clean
 	rm -rf $(NAME)
 
-re: fclean all
+re: fclean all test
 
 .PHONY: test clean fclean re

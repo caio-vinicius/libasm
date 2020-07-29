@@ -19,7 +19,8 @@ $ ./a.out
 
 ## Sources that helped me most
 
-[CS 301: Assembly Language Programming Lecture, Dr. Lawlor](https://www.cs.uaf.edu/2015/fall/cs301/lecture)  
+[CS 301: 2015 Assembly Language Programming Lecture, Dr. Lawlor](https://www.cs.uaf.edu/2015/fall/cs301/lecture)  
+[CS 301: 2017 Assembly Language Programming Lecture, Dr. Lawlor](https://www.cs.uaf.edu/2017/fall/cs301/lecture)  
 [Intel vs. AT&T syntax](http://staffwww.fullcoll.edu/aclifton/courses/cs241/syntax.html)  
 [NASM Tutorial](https://cs.lmu.edu/~ray/notes/nasmtutorial)  
 [The Art of Picking Intel Registers](https://www.swansontec.com/sregisters.html)  
@@ -28,5 +29,5 @@ $ ./a.out
 ## Nice sources
 
 [NASM Docs](https://www.nasm.us/doc/)  
-[Brown University - Intro Computer Systems] (https://cs.brown.edu/courses/cs033/docs/guides/x64_cheatsheet.pdf)  
+[Brown University - Intro Computer Systems](https://cs.brown.edu/courses/cs033/docs/guides/x64_cheatsheet.pdf)  
 [TutorialsPoint Assembly Programming Tutorial](https://www.tutorialspoint.com/assembly_programming/index.htm)  
