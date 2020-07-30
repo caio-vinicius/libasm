@@ -71,5 +71,7 @@ int main(void)
 	else
 		printf("ft_strdup('caio'): |%s|\n", str);
 
+	printf(" == FT_ATOI_BASE == \n");
+	printf("ft_atoi_base: %d\n", ft_atoi_base("-10", 10));
 	return (0);
 }

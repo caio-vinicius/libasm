@@ -6,13 +6,17 @@
 #    By: caio <csouza-f@student.42sp.org.br>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/07/28 11:39:04 by caio              #+#    #+#              #
-#    Updated: 2020/07/29 14:28:53 by caio             ###   ########.fr        #
+#    Updated: 2020/07/29 22:55:59 by caio             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libasm.a
 
-SRCS = ft_strlen.asm ft_strcpy.asm ft_strcmp.asm ft_write.asm ft_read.asm ft_strdup.asm
+SRCS_MANDATORY = ft_strlen.asm ft_strcpy.asm ft_strcmp.asm ft_write.asm ft_read.asm ft_strdup.asm
+
+SRCS_BONUS = ft_atoi_base.asm
+
+SRCS = $(SRCS_MANDATORY) $(SRCS_BONUS)
 
 OBJS = $(patsubst %.asm, build/%.o, $(SRCS))
 
