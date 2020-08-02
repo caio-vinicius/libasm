@@ -31,3 +31,8 @@ $ ./a.out
 [NASM Docs](https://www.nasm.us/doc/)  
 [Brown University - Intro Computer Systems](https://cs.brown.edu/courses/cs033/docs/guides/x64_cheatsheet.pdf)  
 [TutorialsPoint Assembly Programming Tutorial](https://www.tutorialspoint.com/assembly_programming/index.htm)  
+
+## Bonuses sources
+
+[PDF Piscine List Functions](https://masonbee.nz/wp-content/uploads/2020/07/c12.pdf)  
+[Structs Dr. Lawlor](https://www.cs.uaf.edu/2015/fall/cs301/lecture/09_25_structs.html)  
