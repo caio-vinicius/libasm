@@ -2,7 +2,7 @@ section .text
 	global ft_strlen
 
 ft_strlen:
-	mov rcx, 0
+	xor rcx, rcx
 
 ft_strlen_next:
 	cmp [rdi+rcx], byte 0

@@ -1,5 +1,4 @@
 #include "libasm.h"
-
 #include <unistd.h>
 #include <string.h>
 #include <errno.h>
@@ -14,6 +13,7 @@ int main(void)
 	char *buf;
 	int fd;
 	buf = malloc(2);
+	str = malloc(4 + 1);
 
 	printf(" == FT_STRLEN == \n");
 	i = ft_strlen("caio");
@@ -22,8 +22,8 @@ int main(void)
 	printf("   strlen('caio'): %d\n", i);
 	//str = malloc(5);
 	printf(" == FT_STRCPY == \n");
-	//str = strcpy(str, "caio");
-	//printf("   strcpy(str, 'caio'): %s\n", str);
+	str = strcpy(str, "caio");
+	printf("   strcpy(str, 'caio'): %s\n", str);
 	str = ft_strcpy(str, "caio");
 	printf("ft_strcpy(str, 'caio'): %s\n", str);
 
@@ -71,7 +71,5 @@ int main(void)
 	else
 		printf("ft_strdup('caio'): |%s|\n", str);
 
-	printf(" == FT_ATOI_BASE == \n");
-	printf("ft_atoi_base: %d\n", ft_atoi_base("-10", 10));
 	return (0);
 }

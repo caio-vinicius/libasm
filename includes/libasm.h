@@ -15,10 +15,4 @@ ssize_t ft_write(int fd, const void *buf, size_t count);
 ssize_t ft_read(int fd, void *buf, size_t count);
 char	*ft_strdup(const char *s);
 
-int		ft_atoi_base(char *nptr, int base);
-void	ft_list_push_front(t_list **node, t_list *new);
-int		ft_list_size(t_list *node);
-void	ft_list_sort(t_list **node, int (*cmp)());
-void	ft_list_remove_if(t_list **node, void *data_ref, int (*cmp)(), void (*free_fct)(void *));
-
 #endif
