@@ -6,15 +6,15 @@
 #    By: caio <csouza-f@student.42sp.org.br>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/07/28 11:39:04 by caio              #+#    #+#              #
-#    Updated: 2020/08/03 17:03:12 by caio             ###   ########.fr        #
+#    Updated: 2020/08/03 20:59:49 by caio             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libasm.a
 
-SRCS = ft_strlen.asm ft_strcpy.asm ft_strcmp.asm ft_write.asm ft_read.asm ft_strdup.asm
+SRCS = ft_strlen.s ft_strcpy.s ft_strcmp.s ft_write.s ft_read.s ft_strdup.s
 
-OBJS = $(patsubst %.asm, build/%.o, $(SRCS))
+OBJS = $(patsubst %.s, build/%.o, $(SRCS))
 
 VPATH = srcs/
 
@@ -23,11 +23,11 @@ all: $(NAME)
 $(NAME): $(OBJS)
 	ar rcs $@ $^
 
-build/%.o: %.asm
+build/%.o: %.s
 	nasm -f elf64 $< -o $@
 
 test: $(NAME)
-	clang -g -Wall -Wextra -Werror -no-pie main.c $< -I includes/ 
+	clang -Wall -Wextra -Werror -no-pie main.c $< -I includes/ 
 
 clean:
 	rm -rf $(OBJS)

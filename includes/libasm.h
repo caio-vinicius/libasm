@@ -6,12 +6,14 @@
 /*   By: caio <csouza-f@student.42sp.org.br>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/03 17:10:11 by caio              #+#    #+#             */
-/*   Updated: 2020/08/03 17:12:21 by caio             ###   ########.fr       */
+/*   Updated: 2020/08/03 20:58:03 by caio             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBASM_H
 # define LIBASM_H
+
+#include <stdio.h>
 
 typedef struct		s_list {
 	void			*data;
