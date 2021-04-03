@@ -2,19 +2,24 @@ section .text
 	global ft_strcmp
 
 ft_strcmp:
-	mov r15b, [rsi]
-	cmp [rdi], r15b
+	xor rax, rax
+
+ft_strcmp_next:
+	mov al, [rdi]
+	mov bl, [rsi]
+	cmp byte al, 0
+	je ft_strcmp_null
+	cmp byte bl, 0
+	je ft_strcmp_null
+	cmp al, bl
 	jne ft_strcmp_null
-	cmp byte [rdi], 0
-	je ft_strcmp_null
-	cmp byte [rsi], 0
-	je ft_strcmp_null
 	inc rdi
 	inc rsi
-	jmp ft_strcmp
+	jmp ft_strcmp_next
 
 ft_strcmp_null:
-	mov rax, [rdi]
-	sub rax, [rsi]
+	movzx rax, al
+	movzx rbx, bl
+	sub rax, rbx
 	ret
 
