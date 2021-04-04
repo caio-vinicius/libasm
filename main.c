@@ -1,76 +1,24 @@
-#include "libasm.h"
-#include <unistd.h>
-#include <string.h>
-#include <errno.h>
-#include <fcntl.h>
-#include <stdlib.h>
-#include <stdio.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   main.c                                             :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: user42 <user42@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/04/04 17:55:43 by user42            #+#    #+#             */
+/*   Updated: 2021/04/04 17:56:13 by user42           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-int main(void)
+#include "libasmtest.h"
+
+int	main(void)
 {
-	int i;
-	char *str;
-	int ret;
-	char *buf;
-	int fd;
-	buf = malloc(2);
-	str = malloc(4 + 1);
-
-	printf(" == FT_STRLEN == \n");
-	i = ft_strlen("caio");
-	printf("ft_strlen('caio'): %d\n", i);
-	i = strlen("caio");
-	printf("   strlen('caio'): %d\n", i);
-	//str = malloc(5);
-	printf(" == FT_STRCPY == \n");
-	str = strcpy(str, "caio");
-	printf("   strcpy(str, 'caio'): %s\n", str);
-	str = ft_strcpy(str, "caio");
-	printf("ft_strcpy(str, 'caio'): %s\n", str);
-
-	printf(" == FT_STRCMP == \n");
-	i = ft_strcmp("caio", "caio");
-	printf("ft_strcmp('caio', 'caio'): %d\n", i);
-	i = strcmp("caio", "caio");
-	printf("   strcmp('caio', 'caio'): %d\n", i);
-
-	//write
-	printf(" == FT_WRITE == \n");
-	if ((ret = write(1, "caio", 4)) == -1)
-		printf("X | ft_write | %d | %s\n", ret, strerror(errno));
-	else
-		printf(" | ft_write(1, 'caio', 4)\n");
-
-	if ((ret = ft_write(1, "caio", 4)) == -1)
-		printf("X | write | %d | %s\n", ret, strerror(errno));
-	else
-		printf(" | write(1, 'caio', 4)\n");
-
-	//read
-	printf(" == FT_READ == \n");
-	fd = open("teste.txt", O_RDONLY);
-	if (read(fd, buf, 2) == -1)
-		printf("X | ft_read(fd, buf, 2) | %s\n", strerror(errno));
-	else
-		printf("%s | ft_read(fd, buf, 2)\n", buf);
-	close(fd);
-	fd = open("teste.txt", O_RDONLY);
-	if (ft_read(fd, buf, 2) == -1)
-		printf("X | ft_read(fd, buf, 2) | %s\n", strerror(errno));
-	else
-		printf("%s | ft_read(fd, buf, 2)\n", buf);
-	close(fd);
-	//strdup
-	printf(" == FT_STRDUP == \n");
-	if (!(str = strdup("caio")))
-		printf("X | strdup('caio') | errno: %d | |%s|\n", errno, strerror(errno));
-	else
-		printf("strdup('caio'): |%s|\n", str);
-
-	if (!(str = ft_strdup("caio")))
-		printf("X | ft_strdup('caio') | errno: %d | |%s|\n", errno, strerror(errno));
-	else
-		printf("ft_strdup('caio'): |%s|\n", str);
-
+	test_ft_strlen();
+	test_ft_strcpy();
+	test_ft_strcmp();
+	test_ft_write();
+	test_ft_read();
+	test_ft_strdup();
 	return (0);
 }
