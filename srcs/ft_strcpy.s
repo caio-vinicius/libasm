@@ -5,9 +5,10 @@ ft_strcpy:
 	mov rcx, 0
 
 ft_strcpy_next:
+	mov al, [rsi+rcx]
+	mov [rdi+rcx], al
 	cmp [rsi+rcx], byte 0
 	jz ft_strcpy_null
-	mov rdi, rsi
 	inc rcx
 	jmp ft_strcpy_next
 
